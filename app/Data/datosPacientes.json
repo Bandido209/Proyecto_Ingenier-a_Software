@@ -1,0 +1,27 @@
+[
+    {
+      "nombre": "Benito Benafuente",
+      "rut": "12.345.678-9",
+      "telefono": "+56912345678",
+      "correo": "juan.perez@example.com"
+    },
+    {
+      "nombre": "Ana Gómez",
+      "rut": "23.456.789-0",
+      "telefono": "+56923456789",
+      "correo": "ana.gomez@example.com"
+    },
+    {
+      "nombre": "Carlos Rodríguez",
+      "rut": "34.567.890-1",
+      "telefono": "+56934567890",
+      "correo": "carlos.rodriguez@example.com"
+    },
+    {
+      "nombre": "Marta López",
+      "rut": "45.678.901-2",
+      "telefono": "+56945678901",
+      "correo": "marta.lopez@example.com"
+    }
+]
+
