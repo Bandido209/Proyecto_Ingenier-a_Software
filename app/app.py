@@ -2,13 +2,15 @@ from flask import Flask
 from flask import render_template, redirect, request, Response, session
 from flask_mysqldb import MySQL, MySQLdb
 from Code.Logic.Especialista import Especialista
+from datetime import datetime
 import json
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template(('menu_incial.html'))
+    today = datetime.now().strftime('%Y-%m-%d')
+    return render_template(('menu_incial.html'), today=today)
 
 @app.route('/contacto')
 def contacto():

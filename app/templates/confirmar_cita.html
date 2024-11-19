@@ -12,7 +12,7 @@
         <p><strong>Especialidad:</strong> {{ especialidad }}</p>
         <p><strong>Fecha:</strong> {{ fecha }}</p>
         <p><strong>Hora:</strong> {{ hora }}</p>
-        <p><strong>Especialista:</strong> Dr. {{ especialista.nombre }}</p>
+        <p><strong>Especialista:</strong> {{ especialista.nombre }}</p>
 
         <form action="{{ url_for('confirmar_cita') }}" method="POST">
             <div class="form-group">
