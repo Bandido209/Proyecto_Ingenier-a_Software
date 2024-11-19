@@ -1,21 +1,26 @@
 [
     {
-        "nombre": "Dr. Juan Pérez",
+        "nombre": "Dr. Juan Perez",
         "rut": "12.345.678-9",
         "especialidad": "cardiologia"
     },
     {
-        "nombre": "Dra. María González",
+        "nombre": "Dra. Maria Gonzalez",
         "rut": "16.234.567-8",
         "especialidad": "pediatria"
     },
     {
-        "nombre": "Dr. Carlos Muñoz",
+        "nombre": "Dr. Mario Pinto",
+        "rut": "12.345.668-9",
+        "especialidad": "cardiologia"
+    },
+    {
+        "nombre": "Dr. Carlos Fuentes",
         "rut": "13.876.543-2",
         "especialidad": "neurologia"
     },
     {
-        "nombre": "Dra. Camila López",
+        "nombre": "Dra. Camila Lopez",
         "rut": "14.654.321-5",
         "especialidad": "dermatologia"
     },
@@ -25,7 +30,7 @@
         "especialidad": "psiquiatria"
     },
     {
-        "nombre": "Dra. Andrea Martínez",
+        "nombre": "Dra. Andrea Martinez",
         "rut": "17.345.678-1",
         "especialidad": "ginecologia"
     },

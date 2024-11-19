@@ -20,7 +20,6 @@ def contacto():
 def agendar_cita():
     especialidad = request.form['especialidad']
     fecha = request.form['fecha']
-
     especialistas = Especialista.get_especialistas(especialidad)
     return render_template('agendar_cita.html', especialistas=especialistas, especialidad=especialidad, fecha=fecha)  
 

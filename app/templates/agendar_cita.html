@@ -5,18 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agenda de Citas</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            padding-top: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #343a40;
+        }
+
+        h3, h2 {
+            color: #495057;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f1f3f5;
+            font-weight: bold;
+            color: #343a40;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        form {
+            margin-top: 10px;
+        }
+
+        .form-control {
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .no-hours {
+            color: #dc3545;
+        }
+
+        .message {
+            color: #28a745;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-5">Agendar Cita Médica</h1>
+        <h1 class="text-center">Agendar Cita Médica</h1>
 
         <!-- Mostrar Especialidad y Fecha Seleccionada -->
-        <h3>Especialidad: {{ especialidad }}</h3>
-        <h3>Fecha: {{ fecha }}</h3>
+        <h3 class="text-center mt-4">Especialidad: {{ especialidad }}</h3>
+        <h3 class="text-center">Fecha: {{ fecha }}</h3>
 
         {% if especialistas %}
-            <h2 class="mt-4">Especialistas Disponibles</h2>
-            <table class="table mt-3">
+            <h2 class="mt-5">Especialistas Disponibles</h2>
+            <table class="table table-striped mt-3">
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -38,10 +120,10 @@
                                                 <option value="{{ hora }}">{{ hora }}</option>
                                             {% endfor %}
                                         </select>
-                                        <button type="submit" class="btn btn-primary mt-2">Agendar Cita</button>
+                                        <button type="submit" class="btn btn-primary mt-3">Agendar Cita</button>
                                     </form>
                                 {% else %}
-                                    <p>No hay horas disponibles</p>
+                                    <p class="no-hours">No hay horas disponibles</p>
                                 {% endif %}
                             </td>
                         </tr>
@@ -49,7 +131,7 @@
                 </tbody>
             </table>
         {% else %}
-            <p class="mt-4">No hay especialistas disponibles para esta especialidad en la fecha seleccionada.</p>
+            <p class="message">No hay especialistas disponibles para esta especialidad en la fecha seleccionada.</p>
         {% endif %}
     </div>
 
@@ -58,3 +140,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
